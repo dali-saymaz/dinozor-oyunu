@@ -12,7 +12,10 @@ function zipla() {
             dino.classList.remove(`trex-animate`)
         }, 500);
     }
-   
-
 }
+let carpisma = setInterval(() => {
+    let dinoLocation= window.getComputedStyle(dino).getPropertyValue(`bottom`)
+    
+    let kaktusLocation= window.getComputedStyle(flower).getPropertyValue(`left`)
 
+}, 10);
