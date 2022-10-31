@@ -13,9 +13,13 @@ function zipla() {
         }, 500);
     }
 }
-let carpisma = setInterval(() => {
-    let dinoLocation= window.getComputedStyle(dino).getPropertyValue(`bottom`)
-    
-    let kaktusLocation= window.getComputedStyle(flower).getPropertyValue(`left`)
-
+var carpisma = setInterval(() => {
+    var dinoLocation= parseInt(window.getComputedStyle(dino).getPropertyValue(`bottom`))
+    var kaktusLocation= parseInt(window.getComputedStyle(flower).getPropertyValue(`left`))
+    if (kaktusLocation>0 && kaktusLocation<40 && dinoLocation<40) {
+        flower.classList.remove("kaktus-animate")
+        flower.style.display="none"
+        alert("oyun bitti yandin")
+    }
+    console.log(dinoLocation, kaktusLocation)
 }, 10);
